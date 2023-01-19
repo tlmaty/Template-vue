@@ -3,9 +3,9 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\components",
+    "\\src\\router",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\components\\HelloBarre.vue",
+  "SelectedNode": "\\src\\App.vue",
   "PreviewInSolutionExplorer": false
 }

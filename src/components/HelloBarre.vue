@@ -1,6 +1,6 @@
 <template>
     <div class="hellobarre" :style="{ background: this.background, color: this.color }">
-        <p>{{ content }} <a href="#">{{ contentLink }}</a>{{ countDown }}</p>
+        <p>{{ content }} <a href="#">{{ contentLink }}</a><span class="demo"></span></p>
         <span>X</span>
     </div>
 </template>
@@ -13,6 +13,7 @@
             'background',
             'color',
             'contentLink',
+            'dateCount',
         ],
         mounted() {
             let helloBarre = document.querySelector('.hellobarre');
@@ -20,13 +21,38 @@
             closeBtn.addEventListener('click', () => {
                 helloBarre.classList.add('closed');
             });
+            this.countDown()
         },
+
+        methods: {
+            countDown : () => {
+                var countDownDate = new Date("28 janvier 2023").getTime();
+
+                var x = setInterval(function() {
+                    var now = new Date().getTime();
+
+                    var distance = countDownDate - now;
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    days == '0' ? days = '' : days = days + 'j '
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 'h ';
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + 'm ';
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000) + 's';
+
+                    document.querySelector(".demo").innerHTML = days + hours + minutes + seconds;
+
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.querySelector(".demo").innerHTML = "";
+                    }
+                }, 1000);
+            }
+        }
     }
 </script>
 
 <style lang="scss">
     .hellobarre {
-        //background: #00395d; 
         position: sticky;
         top: 0;
         display: flex;
@@ -57,7 +83,7 @@
             max-width: 85%;
         }
 
-        span {
+        & > span {
             right: 1%;
             position: fixed;
             cursor: pointer;

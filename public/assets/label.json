@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "title": "Livraison gratuite 3f",
+    "content": "Profitez de la livraison gratuite jusqu'au 3 février",
+    "background": "#FF352F",
+    "contentLink": "J'en profite !",
+    "color": "white",
+    "dateCount": "3 february 2023 23:59"
+  },
+  {
+    "id": 1,
+    "title": "Soldes",
+    "content": "50% de rabais le premier jour des soldes avec le code SOLDES50 !",
+    "background": "#00395d",
+    "contentLink": "Cliquez ici !",
+    "color": "white",
+    "dateCount": "1 february 2023"
+  },
+  {
+    "id": 2,
+    "title": "Or gratuit",
+    "content": "L'or est gratuit tout le mois de janvier !",
+    "background": "#ad8827",
+    "contentLink": "Je fonce !",
+    "color": "white",
+    "dateCount": "10 june 2023"
+  },
+  {
+    "id": 3,
+    "title": "Nouvelle barre",
+    "content": "Nouvelle barre",
+    "background": "#333",
+    "contentLink": "Lien",
+    "color": "white",
+    "dateCount": "25 janvier 2023"
+  }
+]
