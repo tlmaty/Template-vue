@@ -4,7 +4,9 @@
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/divers">Divers</router-link> |
-        <router-link to="/admin">Administration panel</router-link>
+        <router-link to="/admin">Administration panel</router-link> |
+        <router-link to="/nav">Administration navigation</router-link> | 
+        <router-link to="/hp">Administration homepage MATY</router-link>
     </nav>
     <router-view />
 </template>
