@@ -8,35 +8,6 @@ export default {
     },
     data() {
         return {
-            // barres: [
-            //     { 
-            //         id: 0, 
-            //         title: 'Soldes',
-            //         content: '50% de rabais le premier jour des soldes avec le code SOLDES50 !', 
-            //         background: '#00395d',
-            //         contentLink: 'Cliquez ici !',
-            //         color: 'white',
-            //         dateCount: '18 january 2023 23:59',
-            //     },
-            //     { 
-            //         id: 1, 
-            //         title: 'Livraison gratuite',
-            //         content: 'Profitez de la livraison gratuite jusqu\'au 31 janvier', 
-            //         background: '#FF352F',
-            //         contentLink: 'J\'en profite !',
-            //         color: 'white',
-            //         dateCount: '1 february 2023 23:59',
-            //     },
-            //     { 
-            //         id: 2, 
-            //         title: 'Or gratuit',
-            //         content: 'L\'or est gratuit tout le mois de janvier !', 
-            //         background: '#ad8827',
-            //         contentLink: 'Je fonce !',
-            //         color: 'white',
-            //         dateCount: '10 june 2023 23:59',
-            //     }
-            // ],
             barres : json
         }
     },
@@ -144,11 +115,21 @@ export default {
     },
     mounted() {
         var barres = document.querySelectorAll('.barres .demo')
+        var date = new Date();
         let i = -1;
         barres.forEach(() => {
             i++
-            this.datetimer(i)
+            this.datetimer(i);
+            let barre = this.barres[i]
+            //barre.isActive = 
+            let dateBarre = new Date(this.barres[i].datePublish)
+            let deleteBarre = new Date(this.barres[i].dateDelete)
+            //console.log(dateBarre.getTime() < date.getTime())
+            dateBarre.getTime() < date.getTime() && deleteBarre.getTime() > date.getTime()
+                ? barre.isActive = true
+                : barre.isActive = false
         })
+        //console.log(this.barres)
     },
 }
 
@@ -170,6 +151,7 @@ export default {
                 :color="barre.color"
                 :dateCount="barre.dateCount"
                 :data-date="barre.dateCount"
+                :class="{ active: barre.isActive}"
             />
             <button v-on:click="editbarre(barre)">Modifier</button>
             <button v-on:click="dltbarre(barre)">Supprimer</button>
@@ -188,9 +170,9 @@ export default {
             .containerbarre {
                 display: flex;
                 position: relative;
-                margin: 20px 0;
+                margin: 30px 0;
 
-                 & > p {
+                & > p {
                     position: absolute;
                     top: -40px;
                     color: black;

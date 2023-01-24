@@ -6,7 +6,10 @@
     "background": "#FF352F",
     "contentLink": "J'en profite !",
     "color": "white",
-    "dateCount": "3 february 2023 23:59"
+    "dateCount": "3 february 2023 23:59",
+    "datePublish": "1 janvier 2023 09:00",
+    "dateDelete": "3 february 2023 23h59",
+    "isActive": true
   },
   {
     "id": 1,
@@ -15,7 +18,10 @@
     "background": "#00395d",
     "contentLink": "Cliquez ici !",
     "color": "white",
-    "dateCount": "1 february 2023"
+    "dateCount": "3 february 2023 23:59",
+    "datePublish": "1 janvier 2023 09:00",
+    "dateDelete": "3 february 2023 23h59",
+    "isActive": true
   },
   {
     "id": 2,
@@ -24,7 +30,10 @@
     "background": "#ad8827",
     "contentLink": "Je fonce !",
     "color": "white",
-    "dateCount": "10 june 2023"
+    "dateCount": "10 june 2023",
+    "datePublish": "1 june 2023",
+    "dateDelete": "10 june 2023",
+    "isActive": true
   },
   {
     "id": 3,
@@ -33,7 +42,10 @@
     "background": "#333",
     "contentLink": "Lien",
     "color": "white",
-    "dateCount": "25 janvier 2023"
+    "dateCount": "25 janvier 2023",
+    "datePublish": "23 janvier 2023",
+    "dateDelete": "24 janvier 2023 09:00",
+    "isActive": true
   },
   {
     "id": 4,
@@ -42,6 +54,9 @@
     "background": "#666",
     "contentLink": "Super lien",
     "color": "violet",
-    "dateCount": "25 janvier 2023"
+    "dateCount": "30 march 2023",
+    "datePublish": "1 march 2023",
+    "dateDelete": "30 march 2023",
+    "isActive": true
   }
 ]
